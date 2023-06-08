@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng kí thành viên mới</title>
+<head>
+
+{% extends 'Home/base.html' %}
+
+<body>
+{% block content %}
+ 
+<div class="from form-group text-center container">
+    <div class="section-heading">
+        <h2 class="section-title">Đăng kí</h2>
+        <div class="med-divider"></div>
+    </div>
+    <form action='.' method='POST' id="form1">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Đăng kí"/>
+    </form>
+</div>
+
+{% endblock %}
+</body>
+</html>

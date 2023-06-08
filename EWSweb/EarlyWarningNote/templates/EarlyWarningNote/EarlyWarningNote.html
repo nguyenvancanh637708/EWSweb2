@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biện pháp ứng phó</title>
+<head>
+
+{% extends 'Home/base.html' %}
+
+<body>
+{% block content %}
+	<div id="posts" class="main-section bottom-padding wf-section container">
+		<div id="Latest-post" class="w-container">
+			<div class="section-heading">
+				<h2 class="section-title text-uppercase text-center mt-5" style="font-size: 24px;
+				font-weight: 400;">TIMELINE CẢNH BÁO NGUY CƠ TAI BIẾN TRƯỢT LỞ - LŨ BÙN ĐÁ - LŨ QUÉT <br> TẠI 3 KHU VỰC NGHIÊN CỨU CHI TIẾT </h2>
+				<hr class="bg-dark" style="width: 20%; margin: 2% 40% 0 40%;"></hr>
+				<div class="med-divider"></div>
+			</div>	
+			<div class="w-dyn-list" style="text-align: center; display: block;">
+				<div role="list" class="w-clearfix w-dyn-items w-row mt-5">
+					{% comment %} <h4 class="blog-title mt-5">TIMELINE CẢNH BÁO NGUY CƠ TAI BIẾN XÃ BẢN RỊA - HÀ GIANG</h4><br> {% endcomment %}
+					<figure class="highcharts-figure">
+						<div id="chart5"></div>
+					  </figure>
+				</div>
+				 <div role="list" class="mt-5">
+					{% comment %} <h4 class="blog-title">TIMELINE CẢNH BÁO NGUY CƠ TAI BIẾN XÃ CẤT THỊNH - YÊN BÁI</h4><br> {% endcomment %}
+					<figure class="highcharts-figure">
+						<div id="chart6"></div>
+					  </figure>
+				</div>
+				<div role="list" class="mt-5">
+					{% comment %} <h4 class="blog-title">TIMELINE CẢNH BÁO NGUY CƠ TAI BIẾN XÃ CHIỀNG ĐÔNG - SƠN LA</h4><br> {% endcomment %}
+					<figure class="highcharts-figure">
+						<div id="chart7"></div>
+					  </figure>
+				</div>		
+				{% comment %} <div role="list" class="mt-5">
+					 <h4 class="blog-title">TIMELINE CẢNH BÁO NGUY CƠ TAI BIẾN XÃ CHIỀNG ĐÔNG - SƠN LA</h4><br> 
+					<figure class="highcharts-figure">
+						<div id="chart8"></div>
+					  </figure>
+				</div>		 {% endcomment %}
+			</div>
+
+		</div>
+		
+	</div>
+
+	<div id="posts" class="wf-section">
+		<div id="Latest-post" class="w-container">
+			<div class="section-heading">
+				<h2 class="section-title text-center mt-5" style="font-size: 24px;
+				font-weight: 400;">DỰ BÁO NGUY CƠ TRƯỢT LỞ THEO CÁC KHOẢNG THỜI GIAN</h2>
+				<hr class="bg-dark line-title" ></hr>
+				<div class="med-divider"></div>
+			</div>
+			<br>
+			  <div class="w-dyn-list" style="text-align: center; display: block;">
+				<div role="list" class="w-clearfix w-dyn-items w-row mt-3">
+					{% comment %} <h4 class="blog-title mt-5">TIMELINE CẢNH BÁO NGUY CƠ TAI BIẾN XÃ BẢN RỊA - HÀ GIANG</h4><br> {% endcomment %}
+					{% comment %} <figure class="highcharts-figure">
+						<div id="chart8"></div>
+					  </figure> {% endcomment %}
+					  <a href="https://postimages.org/" target="_blank" style="text-align: center; display: block;"><img src="https://i.postimg.cc/mDP8dcLh/Forecast-landslide-2022-07-31.jpg" width="55%" border="0" alt="Forecast-landslide-2022-07-31"></a>
+					  
+				</div>
+					
+			</div> 
+		</div>
+
+	</div>
+
+	
+
+
+{% endblock %}
+</body>
+</html>

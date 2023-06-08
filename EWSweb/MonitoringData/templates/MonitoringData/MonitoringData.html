@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dữ liệu quan trắc</title>
+<head>
+
+{% extends 'Home/base.html' %}
+
+<body>
+{% block content  %}
+	<div id="posts" class="main-section bottom-padding wf-section container">
+		<div id="Latest-post" class="w-container">
+			<div class="section-heading">
+				<h2 class="section-title text-uppercase text-center mt-5" style="font-size: 24px;
+				font-weight: 400;">HỆ THỐNG QUAN TRẮC TẠI XÃ BẢN RỊA - QUANG BÌNH - HÀ GIANG</h2>
+				<hr class="bg-dark" style="width: 20%; margin: 2% 40% 0 40%;"></hr>
+				<div class="med-divider"></div>
+			</div>	
+			<div class="w-dyn-list" style="text-align: center; display: block;">
+				<div role="list" class="w-clearfix w-dyn-items w-row mt-5">
+					{% comment %} <h4 class="blog-title">DIỄN BIẾN MƯA GIỜ</h4><br> {% endcomment %}
+					<figure class="highcharts-figure">
+						<div id="container"></div>
+					  </figure>
+				</div>
+				<div role="list" class="mt-5">
+					{% comment %} <h4 class="blog-title">DIỄN BIẾN MỰC NƯỚC SUỐI</h4><br> {% endcomment %}
+					<figure class="highcharts-figure">
+						<div id="container2"></div>
+					  </figure>  
+				</div>
+				<div role="list" class="mt-5">
+					{% comment %} <h4 class="blog-title">DIỄN BIẾN ÁP LỰC NƯỚC LỖ RỖNG TRÊN SƯỜN LA</h4><br> {% endcomment %}
+					<figure class="highcharts-figure">
+						<div id="container3"></div>
+					  </figure> 
+				</div>
+				<div role="list" class="mt-5">
+					<h4 class="blog-title mb-3 fw-normal">HÌNH ẢNH GIÁM SÁT SUỐI BẰNG CAMERA</h4><br>
+					<iframe
+						
+						class="video-youtube"
+						height="360"
+						frameborder="0" style="border:0"
+						loading="lazy" allowfullscreen
+						src="https://www.youtube.com/embed/y7e-GC6oGhg">
+					</iframe>
+				</div>		
+				<div role="list" class="mt-5">
+					{% comment %} <h4 class="blog-title">DIỄN BIẾN RUNG ĐỘNG NỀN XÁC ĐỊNH BẰNG GEOPHONE</h4><br> {% endcomment %}
+					<figure class="highcharts-figure">
+						<div id="container4"></div>
+					  </figure> 
+  
+				</div>
+					
+			</div>
+		</div>
+	</div>
+
+
+	<div id="posts" class="main-section bottom-padding wf-section container">
+		<div id="Latest-post" class="w-container">
+			<div class="section-heading">
+				
+				
+				<h2 class="section-title text-center mt-5" style="font-size: 24px;
+				font-weight: 400;">SỐ LIỆU KHÍ TƯỢNG PHỤC VỤ CẢNH BÁO SỚM</h2>
+				<hr class="bg-dark" style="width: 20%; margin: 2% 40% 0 40%;"></hr>
+				<div class="med-divider"></div>
+			</div>
+			<div class="w-dyn-list" style="text-align: center; display: block;">
+				<div role="list" class="w-clearfix w-dyn-items w-row mt-5">
+					<h4 class="blog-title mb-3 fw-normal">DỮ LIỆU ẢNH RADAR MÂY VỆ TINH - NGUỒN VENTUSKY</h4>
+					<iframe
+					class="video-youtube"
+						height="450"
+						frameborder="0" style="border:0"
+						loading="lazy" allowfullscreen
+						src="https://www.ventusky.com/?p=20.18;106.14;5&l=radar">
+					</iframe>
+				</div>
+				<div role="list" class="mt-5">
+					<h4 class="blog-title mb-3 fw-normal">DỰ BÁO MƯA TRONG 12 GIỜ TỚI - NGUỒN WINDY.COM</h4>
+					<iframe
+					class="video-youtube"
+						height="450"
+						frameborder="0" style="border:0"
+						loading="lazy" allowfullscreen
+						src="https://embed.windy.com/embed2.html?lat=20.283&lon=107.095&detailLat=21.031&detailLon=105.852&width=650&height=450&zoom=6&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=12&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1">
+					</iframe>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+	
+{% endblock %}
+</body>
+
+</html>

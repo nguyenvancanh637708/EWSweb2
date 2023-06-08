@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liên hệ, cung cấp thông tin cảnh báo</title>
+<head>
+  
+  {% extends 'Home/base.html' %}
+  
+<body>
+  {% block content %}
+  <form method="POST" novalidate>
+    {% csrf_token %}
+    <h2>Login</h2>
+    {{form.as_p}}
+    <input type="submit" value="Login" />
+  </form>
+  
+  {% endblock content%}
+</body>
+</html>

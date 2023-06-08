@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tài liệu hướng dẫn cho cộng đồng</title>
+<head>
+
+{% extends 'Home/base.html' %}
+
+<body>
+{% block content %}
+	<div class="container">
+		<div class="section-heading">
+			<div class="med-divider"></div>
+		</div>
+		<div class="story py-5">
+			<div class="container">
+			  <div class="">
+				<h2 class="text-uppercase text-center " style="font-size: 24px;
+				font-weight: 400;"> MỘT SỐ HOẠT ĐỘNG PCTT TIÊU BIỂU CỦA CỘNG ĐỒNG</h2>  
+				<hr class="bg-dark" style="width: 20%; margin: 2% 40% 0 40%;"></hr>
+
+			  </div>     
+			  <div class="story-list-sub mt-5">
+				<div class="story-item-sub">
+				  <div class="story-image">
+					<img src="https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="" />
+				  </div>
+				  <div class="story-content">
+					<h3 class="story-title px-3">
+						Báo cáo
+					</h3>
+					<p class="story-desc px-3">
+						Tổng thiệt hại do thiên tai năm 2022.
+					</p>
+					<div class="story-date px-3">
+					  <span >Nguồn:Báo ĐT ĐCSVN</span>
+					  <span>23/02/2023</span>
+					</div>
+				  </div>
+				</div>
+				<div class="story-item-sub">
+				  <div class="story-image">
+					<img src="https://images.unsplash.com/photo-1483119624769-b1a73c256500?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1465&q=80" alt="" />
+				  </div>
+				  <div class="story-content">
+					<h3 class="story-title px-3">
+						Tin tức cảnh báo
+					</h3>
+					<p class="story-desc px-3">
+						Bản tin cuối cùng về cơn bão số 5.
+					</p>
+					<div class="story-date px-3">
+					  <span >Cổng TTDT KomTom</span>
+					  <span>23/02/2023</span>
+					</div>
+				  </div>
+				</div>
+				<div class="story-item-sub">
+				  <div class="story-image">
+					<img src="https://images.unsplash.com/photo-1573614036040-7dc75024d7e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
+				  </div>
+				  <div class="story-content">
+					<h3 class="story-title px-3">
+						Chia sẻ kinh nghiệm về PCTT
+					</h3>
+					<p class="story-desc px-3">
+						Kinh nghiệm về PCTT.
+					</p>
+				   <div class="story-date px-3">
+					  <span >Nguồn:Cổng TTDT Nghệ An</span>
+					  <span>23/02/2023</span>
+					</div>
+				  </div>
+				</div>
+				
+			  {% comment %} <div  class="my-5 text-center"> <a href="#!" class="text-decoration-none view-more text-white p-2">
+				  Xem thêm
+				</a></div> {% endcomment %}
+			</div>
+		  </div>
+		
+	</div> 
+
+	<div id="posts" class="wf-section">
+		<div id="Latest-post" class="w-container">
+			<div class="section-heading">
+				<h2 class="section-title text-uppercase text-center " style="font-size: 24px;
+				font-weight: 400;">TÀI LIỆU HƯỚNG DẪN CẢNH BÁO SỚM DỰA VÀO CỘNG ĐỒNG</h2>
+				<hr class="bg-dark" style="width: 20%; margin: 2% 40% 0 40%;"></hr>
+				
+				<div class="med-divider"></div>
+			</div>
+			<br>
+			<ul class="blog-title text-center list-unstyled mt-5" style="color: black; padding-bottom: 57px; ">
+				<li ><a href= " https://phongchongthientai.mard.gov.vn/Pages/Tai-lieu-truyen-thong-pctt.aspx "target="_blank" style="color: black;"> Tài liệu truyền thông về Phòng chống thiên tai </a></li>
+				<li><a href= " http://www.vncold.vn/Modules/CMS/Upload/10/KhoaHocCongNghe/160108/DrPhuc_VinAWARE.pdf "target="_blank" style="color: black;"> Hướng dẫn sử dụng hệ thống cảnh báo sớm dựa vào cộng đồng thôn bản </a></li>
+				<li><a href= " https://baochinhphu.vn/bo-y-te-huong-dan-phan-loai-4-cap-do-dich-102302137.htm "target="_blank" style="color: black;"> Bộ tiêu chí các cấp báo động tích hợp tai biến </a></li>
+				<li><a href= " https://vncdc.gov.vn/huong-dan-cach-ly-y-te-tai-nha-noi-luu-tru-de-phong-chong-benh-covid-19-nd15558.html "target="_blank" style="color: black;"> Quy trình báo động và ứng phó tai biến cấp thôn bản </a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main-section bottom-padding w-container">
+		<div class="section-heading">
+			<h2 class="section-title text-uppercase text-center" style="font-size: 24px;
+			font-weight: 400;">VIDEO HƯỚNG DẪN PCTT CÓ SỰ THAM GIA CỦA CỘNG ĐỒNG</h2>
+			<hr class="bg-dark" style="width: 20%; margin: 2% 40% 0 40%;"></hr>
+			
+			<div class="med-divider"></div>
+		</div>
+		<div style="text-align: center; display: block;" class="mt-5">
+			<iframe  height="360" src="https://www.youtube.com/embed/nvwahP0ud_8" class="video-youtube"></iframe><br>
+			<iframe  height="360" src="https://www.youtube.com/embed/ZMRu-A-a4g0" class="video-youtube"></iframe><br>
+			<iframe height="360" src="https://www.youtube.com/embed/IIudaL1fzEk" class="video-youtube"></iframe>
+		</div>
+	</div>
+{% endblock %}
+</body>
+</html>

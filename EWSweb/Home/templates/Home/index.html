@@ -1,0 +1,325 @@
+<!--
+
+	* Phiên bản thử nghiệm Website cảnh báo sớm có sự tham gia của cộng đồng Ver 1.0
+	* Bản quyền thuộc sản phẩm đề tài ĐTĐL.CN 78.21	
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta property = "og:image" content="https://quantrac.maiatech.com.vn/Home/static/images/logo.png">
+	<title>Hệ thống cảnh báo sớm có sự tham gia của cộng đồng</title>
+	{% extends 'Home/base.html' %}
+	
+
+</head>	
+
+{% block content %}
+<body onLoad="initialize()">
+	<div class="container py-5">
+		<h2 class="text-uppercase text-center" style="font-size: 24px;
+    font-weight: 400;">Bản đồ cảnh báo ứng phó cho các khu vực nghiên cứu chi tiết</h2>
+    <hr class="bg-dark line-title"></hr>
+
+		<div class="text-center mt-5">
+		  <div class="row row-gap-5" >
+			<div class="col-md-12 ">
+			  <iframe
+        class="location-warning"
+					width="80%"
+				
+					frameborder="0" style="border:0"
+					loading="lazy" allowfullscreen
+					src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDaX6l5GG3SRAmR3iHvINd2oolA4a0tGUU&q=Bản Rịa, Hà Giang, Vietnam&center=22.445562,104.482997&zoom=13&maptype=satellite">
+				  </iframe>
+			</div>
+			<div class="col-md-12 ">
+			  <iframe
+        class="location-warning"
+					width="80%"
+				
+					frameborder="0" style="border:0"
+					loading="lazy" allowfullscreen
+					src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDaX6l5GG3SRAmR3iHvINd2oolA4a0tGUU&q=Cát Thịnh, Yên Bái, Vietnam&center=21.491580,104.678683&zoom=13&maptype=satellite">
+				  </iframe>
+			</div>
+			 <div class="col-md-12">
+			  <iframe
+          class="location-warning"
+					width="80%"
+					
+					frameborder="0" style="border:0"
+					loading="lazy" allowfullscreen
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDaX6l5GG3SRAmR3iHvINd2oolA4a0tGUU&q=Chiềng Đông, Yên Châu, Sơn La, Vietnam&center=21.120142,104.239673&zoom=13&maptype=satellite">				  </iframe>
+			</div>
+		  </div>
+		 
+		</div>
+	</div>
+
+<div class="container mt-5">
+    <h2 class="text-uppercase text-center " style="font-size: 24px;
+        font-weight: 400;">MỘT SỐ KHU VỰC CẦN CẢNH GIÁC TRONG 24 GIỜ TỚI</h2>
+        <hr class="bg-dark line-title" ></hr>
+
+  <div class="table-responsive table-content mt-5">
+        <table class="table table-style table-bordered">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center px-3 " >Tỉnh</th>
+            <th scope="col" class="text-center px-3 " >Huyện</th>
+            <th scope="col" class="text-center px-3 " >Xã</th>
+            <th scope="col" class="text-center px-3 " >Risk3h</th>
+            <th scope="col" class="text-center px-3 " >Risk12h</th>
+            <th scope="col" class="text-center px-3 " >Risk24h</th>
+            <th scope="col" class="text-center px-3 ">Risk48h</th>
+          </tr>
+        </thead>
+      <tbody class="table-group-divider">
+        {%for Sites in sM%}
+          <tr>
+            <td class="text-center px-3"  >{{Sites.Province}}</td>
+            <td class="text-center px-3" >{{Sites.Distric}}</td>
+            <td class="text-center px-3" >{{Sites.Commune}}</td>
+            <td class="text-center px-3" >{{Sites.Risk3h}}</td>
+            <td class="text-center px-3" >{{Sites.Risk12h}}</td>
+            <td class="text-center px-3" >{{Sites.Risk24h}}</td>
+            <td class="text-center px-3" >{{Sites.Risk48h}}</td>
+          </tr>
+        {%endfor%}    
+          
+        </tbody>
+      </table>
+            </div>  
+          </div>
+ 
+	<div>
+		
+	</div>
+
+{% comment %}
+	Tin Tức
+{% endcomment %}
+<div class="main-section bottom-padding w-container">
+		
+  <div class="story py-5">
+			<div class="container">
+			  <div class="">
+				<h2 class="text-uppercase text-center mt-5" style="font-size: 24px;
+        font-weight: 400;"> TIN TỨC PHÒNG CHỐNG THIÊN TAI</h2>    
+        <hr class="bg-dark line-title" ></hr>
+
+			  </div>    
+			  <div class="d-flex">
+				{% for item in pF %}
+					<p><a href="{% url 'Home:postDetail' item.id%}">{{item.title }} </a></p>
+				{%endfor%}
+			</div> 
+			  <div class="story-list mt-5">
+				<div class="story-item">
+				  <div class="story-image">
+					<img src="https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="" />
+				  </div>
+				  <div class="story-content">
+					<h3 class="story-title">
+						Báo cáo
+					</h3>
+					<p class="story-desc">
+						Tổng thiệt hại do thiên tai năm 2022.
+					</p>
+					<div class="story-date">
+					  <span >Nguồn:Báo ĐT ĐCSVN</span>
+					  <span>23/02/2023</span>
+					</div>
+				  </div>
+				</div>
+				<div class="story-item">
+				  <div class="story-image">
+					<img src="https://images.unsplash.com/photo-1483119624769-b1a73c256500?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1465&q=80" alt="" />
+				  </div>
+				  <div class="story-content">
+					<h3 class="story-title">
+						Tin tức cảnh báo
+					</h3>
+					<p class="story-desc">
+						Bản tin cuối cùng về cơn bão số 5.
+					</p>
+					<div class="story-date">
+					  <span >Cổng TTDT KomTum</span>
+					  <span>23/02/2023</span>
+					</div>
+				  </div>
+				</div>
+				<div class="story-item">
+				  <div class="story-image">
+					<img src="https://images.unsplash.com/photo-1573614036040-7dc75024d7e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" />
+				  </div>
+				  <div class="story-content">
+					<h3 class="story-title">
+						Chia sẻ kinh nghiệm về PCTT
+					</h3>
+					<p class="story-desc">0
+						Kinh nghiệm về PCTT.
+					</p>
+				   <div class="story-date">
+					  <span >Nguồn:Cổng TTDT Nghệ An</span>
+					  <span>23/02/2023</span>
+					</div>
+				  </div>
+				</div>
+				<div class="story-item">
+					<div class="story-image">
+						<img src="https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="" />
+
+					</div>
+					<div class="story-content">
+					  <h3 class="story-title">
+						  Báo cáo
+					  </h3>
+					  <p class="story-desc">
+						  Tổng thiệt hại do thiên tai năm 2022.
+					  </p>
+					  <div class="story-date">
+						<span >Nguồn:Báo ĐT ĐCSVN</span>
+						<span>23/02/2023</span>
+					  </div>
+					</div>
+				  </div>
+			   
+			  </div>
+			  
+			</div>
+		  </div>
+		
+	</div>
+       
+	{% comment %} <div class="main-section bottom-padding w-container">
+		<div class="section-heading">
+			<h2 class="section-title" style="text-align:center">TIN TỨC PHÒNG CHỐNG THIÊN TAI</h2>
+			<div class="med-divider"></div>
+		</div>
+        <div class="container">
+            <div class="">
+                <div class="d-flex">
+                    {% for item in pF %}
+                        <p><a href="{% url 'Home:postDetail' item.id%}">{{item.title }} </a></p>
+                    {%endfor%}
+                </div>
+            </div>
+        </div> {% endcomment %}
+{% comment %}       
+		<div class="w-dyn-list">
+			<div role="list" class="w-clearfix w-dyn-items w-row">
+				<div role="listitem" class="blog-thumbnail w-dyn-item w-col w-col-4">
+					<a href="https://baotainguyenmoitruong.vn/kiem-tra-cong-tac-ung-pho-khac-phuc-hau-qua-sat-lo-dat-tai-thai-nguyen-340438.html" class="thumbnail-wrapper w-inline-block">
+						<div style="background-image: url(&quot;https://btnmt.1cdn.vn/2022/05/31/1(4).jpg&quot;); transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="thumbnail-image image-wrapper"></div>
+						<div class="thumbnail-text">
+							<div class="blog-title">Công tác tái thiết sau thiên tai</div>
+							<div class="preview-text">Kiểm tra công tác ứng phó, khắc phục hậu quả sạt lở đất tại Thái Nguyên</div>
+						</div>
+						<div class="thumb-details w-clearfix">
+							<div class="author-title">Nguồn: Báo tài nguyên và Môi trường</div>
+							<div class="thumbnail-date">31/05/2022</div>
+						</div>
+					</a>
+				</div>
+				
+				<div role="listitem" class="blog-thumbnail w-dyn-item w-col w-col-4">
+					<a href="https://vtv.vn/xa-hoi/yen-bai-tinh-lo-172-van-chua-thong-tuyen-sau-6-ngay-sat-lo-20220607000653729.htm" class="thumbnail-wrapper w-inline-block">
+						<div style="background-image: url(&quot;https://vtv1.mediacdn.vn/thumb_w/640/2022/6/7/vnapotalyenbaiduongtinhlo172vanchuaduocthongtuyensau6ngaysatlo1205497866155426-1654534953697118518675.jpg&quot;); transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="thumbnail-image image-wrapper"></div>
+						<div class="thumbnail-text">
+							<div class="blog-title">Thông tin thiệt hại</div>
+							<div class="preview-text">Tỉnh lộ 172 vẫn chưa thông tuyến sau 6 ngày sạt lở</div>
+						</div>
+						<div class="thumb-details w-clearfix">
+							<div class="author-title">Nguồn: VTV Điện tử</div>
+							<div class="thumbnail-date">07/06/2022</div>
+						</div>
+					</a>
+				</div>
+				
+				<div role="listitem" class="blog-thumbnail w-dyn-item w-col w-col-4">
+					<a href="https://vnanet.vn/vi/anh/anh-thoi-su-trong-nuoc-1014/son-la-can-som-di-chuyen-gan-70-ho-dan-vung-nguy-co-sat-lo-o-ban-na-pan-yen-chau-5550780.html" class="thumbnail-wrapper w-inline-block">
+						<div style="background-image: url(&quot;https://vnanet.vn/Data/Articles/2021/07/12/5550771/vna_potal_son_la_can_som_di_chuyen_gan_70_ho_dan_vung_nguy_co_sat_lo_o_ban_na_pan_yen_chau_stand.jpg&quot;); transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="thumbnail-image image-wrapper"></div>
+						<div class="thumbnail-text">
+							<div class="blog-title">Cảnh báo khu vực nguy hiểm</div>
+							<div class="preview-text">Điểm lở đá nguy hiểm tại xã Chiềng Đông</div>
+						</div>
+						<div class="thumb-details w-clearfix">
+							<div class="author-title">Nguồn: TTX Việt Nam</div>
+							<div class="thumbnail-date">12/07/2021</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> {% endcomment %}
+
+    <div class="container">
+        <h2 class="text-uppercase text-center mt-5" style="font-size: 24px;
+        font-weight: 400;">CÁC CƠ QUAN PHỐI HỢP THỰC HIỆN ĐỀ TÀI ĐTĐL.CN 78.21</h2>
+        <hr class="bg-dark line-title" ></hr>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+         <div class="">
+           <img src="Home/static/images/Logo_DH Bach Khoa.png" alt="" width="250px" height="250px" class="object-fit-fill  rounded"/>
+         </div>
+         <div class="">
+           <img src="Home/static/images/Logo_VDC.jpg" alt="" width="250px" height="250px" class="object-fit-scale  rounded"/>
+         </div>
+         <div class="over">
+           <img src="Home/static/images/Logo_Vu cong dong facebook.jpg" class="object-fit-cover  rounded" alt="" width="250px" height="250px"/>
+         </div>
+        </div>
+     </div>
+
+
+	<script src="http://truotlo.com/libs/jquery/jquery-1.12.4.min.js"></script>
+<script src="http://truotlo.com/libs/bootstrap/js/bootstrap.js"></script>
+    
+    <script src="http://truotlo.com/libs/gasparesganga-jquery-loading-overlay/src/loadingoverlay.min.js"></script>
+    <script src="http://truotlo.com/libs/gasparesganga-jquery-loading-overlay/extras/loadingoverlay_progress/loadingoverlay_progress.min.js"></script>
+    <script src="http://truotlo.com/libs/toastr/toastr.min.js"></script>
+    <script src="http://truotlo.com/js/common.js"></script>
+    
+ <script src="http://truotlo.com/libs/jqplot/jquery.jqplot.min.js"></script>
+    <script src="http://truotlo.com/libs/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+    <script src="http://truotlo.com/libs/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+    <script src="http://truotlo.com/libs/jqplot/plugins/jqplot.dateAxisRenderer.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="http://truotlo.com/libs/datatable.net/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+
+    <script src="http://truotlo.com/libs/bxslider/jquery.bxslider.min.js"></script>
+
+    <script src="http://truotlo.com/libs/moment/moment.min.js"></script>
+
+    <script src="http://truotlo.com/libs/map-v3-utility-library/markerwithlabel/markerwithlabel.js"></script>
+
+    <script src="http://truotlo.com/js/home.js"></script>
+    
+    <script>
+        
+		$('#myModal').on('shown.bs.modal', function () {
+			$('#myInput').trigger('focus')
+		  })
+    </script>
+      
+
+{% endblock %}
+</body>
+<html>
+
+

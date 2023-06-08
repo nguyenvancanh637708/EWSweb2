@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liên hệ, cung cấp thông tin cảnh báo</title>
+<head>
+
+{% extends 'Home/base.html' %}
+
+<body>
+{% block content %}
+	<div id="posts" class="wf-section">
+		<div id="Latest-post" class="container text-center">
+			<div class="section-heading">
+				<h2 class="section-title mt-5 " style="font-size: 26px;
+				font-weight: 400;">THÔNG TIN LIÊN HỆ TRONG TRƯỜNG HỢP KHẨN CẤP</h2>
+				<div class="med-divider"></div>
+			</div>
+			<br>
+			<ul class="blog-title list-unstyled" style="color: black; padding-bottom: 57px;">
+				<li>Đường dây nóng TC PCTT: 024.37333.3664 - 024.3734.9821</li>
+				<li>Facebook: https://www.facebook.com/phongchongthientaivn</li>
+				<li>Vụ Quản lý thiên tai cộng đồng: 024.3733.5804</li>
+				<li>Đề tài cấp nhà nước ĐTĐL 78/21: 039.9750.875</li>
+				<li>Email: canhbaothientaicongdong@gmail.com</li>
+			</ul>
+		</div>
+	</div>
+	
+
+</section>
+
+	<div class="from form-group text-center container">
+		<div class="section-heading">
+			<h2 class="section-title" style="font-size: 24px;
+			font-weight: 400;">Liên hệ với chúng tôi</h2>
+			<div class="med-divider"></div>
+		</div>
+		<form action="{% url 'Contact:getContact'%}" method="post" id="form1">
+			{% csrf_token%}
+			{{cf.as_p}}
+			<input type ="Submit">	
+		</form>	
+	</div>
+	<div class="from form-group text-center container">
+		<div class="section-heading">
+			<h2 class="section-title" style="font-size: 24px;
+			font-weight: 400;">Đăng nhập/Đăng ký</h2>
+			<div class="med-divider"></div>
+		</div>
+		<form action="{% url 'Contact:getContact'%}" method="post" id="form1">
+			<a href="https://quantrac.maiatech.com.vn/Login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Đăng nhập</a>
+			<a href="https://quantrac.maiatech.com.vn/Register" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Đăng ký</a>
+		</form>	
+	</div>
+	
+
+	{% comment %} <div class="from form-group text-center container">
+		<div class="section-heading">
+			<h2 class="section-title">Đăng nhập</h2>
+			<div class="med-divider"></div>
+		</div>
+		<form method="POST" novalidate>
+			{% csrf_token %}
+			<h2>Login</h2>
+			{{form.as_p}}
+			<input type="submit" value="Login" />
+		  </form>	
+	</div>
+	 {% endcomment %}
+
+	 {% comment %} <div id="posts" class="wf-section">
+		<div id="Latest-post" class="w-container">
+			<div class="section-heading">
+				<h2 class="section-title">ĐĂNG NHẬP</h2>
+				<div class="med-divider"></div>
+			</div>
+			<br>
+			<form action="{% url 'Contact:Contact'%}" method="post" style="text-align: center; display: block; padding-bottom: 57px;">
+				{% csrf_token %}
+				{{LF.as_p}}
+				<input type="Submit">
+			</form>	
+		</div>
+	</div>
+
+	<div class="main-section bottom-padding w-container">
+		<div class="section-heading">
+			<h2 class="section-title">ĐĂNG KÍ THÀNH VIÊN</h2>
+			<div class="med-divider"></div>
+		</div>
+		<form action="{% url 'Contact:Contact'%}" method="post" style="text-align: center; display: block;">
+			{% csrf_token %}
+			{{LF.as_p}}
+			<input type="Submit">
+		</form>	
+	</div> {% endcomment %}
+
+{% endblock %} 
+</body>
+</html>

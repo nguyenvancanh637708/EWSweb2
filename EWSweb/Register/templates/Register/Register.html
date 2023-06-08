@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng kí thành viên mới</title>
+<head>
+
+{% extends 'Home/base.html' %}
+
+<body>
+{% block content %}
+
+<div class="from form-group text-center container">
+	<div class="section-heading">
+		<h2 class="section-title">Đăng kí</h2>
+		<div class="med-divider"></div>
+	</div>
+	<form action="{% url 'Register:getRegister'%}" method="POST"id="form1">
+		{% csrf_token %}
+		{{RF.as_p}}
+		<input type="Submit">
+	</form>
+</div>
+
+{% endblock %}
+</body>
+</html>

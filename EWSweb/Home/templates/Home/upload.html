@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liên hệ, cung cấp thông tin cảnh báo</title>
+<head>
+  
+  {% extends 'Home/base.html' %}
+  
+<body>
+  {% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>
+  
+  {% endblock %}
+</body>
+</html>
